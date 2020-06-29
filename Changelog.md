@@ -3,6 +3,7 @@
 ## 0.8.3
 
 - Bugfix: `allow_substates` did not consider enum states
+- Feature #447: allow custom states to be derived from Enum, string or dict (thanks @chrko)
 
 ## 0.8.2 (June 2020)
 
