@@ -387,7 +387,7 @@ m.error()
 assert m.state is States.ERROR
 ```
 
-You can mix enums and strings if you like (e.g. `[States.RED, 'ORANGE', States.YELLOW, States.GREEN]`) but note that internally, `transitions` will still handle states by name (`enum.Enum.name`).
+You can mix enums and strings if you like (e.g. `[States.RED, 'ORANGE', States.YELLOW, States.GREEN]`) but note that internally, `transitions` will still handle states by name (`enum.Enum.name`); and some commands, such as `get_triggers` must be called with enum names, not the enums themselves: `get_triggers(m.state.name)`. 
 Thus, it is not possible to have the states `'GREEN'` and `States.GREEN` at the same time.
 
 ### <a name="transitions"></a>Transitions
